@@ -1,0 +1,162 @@
+<!-- Jasmine Pawliw -->
+<!-- NSID: sob127 -->
+<!-- Student #: 11309010 -->
+<!-- Dr. Madison Klarkowski -->
+<!-- CMPT 281 -->
+<!-- Assignment 2 + 3 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Second Avenue Dental</title>
+    <link rel="icon" type="image/x-icon" href="C:\Users\jasmi\OneDrive - University of Saskatchewan\Year Three\CMPT 281\Assignment 2\Icons\tooth-solid.svg">
+    <link rel="stylesheet" href="styles.css" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/8916d77dd2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar_container">
+            <ul class="navbar_menu">
+                
+                <!-- Logo -->
+                <a href="" id="navbar_logo"> 
+                    <!-- C:\Users\jasmi\OneDrive - University of Saskatchewan\Year Three\CMPT 281\Assignment 2\ -->
+                    <img src="Images\second_ave.png" alt="Second Ave Dental Logo" width="200px" height="100px" class="nav_logo">
+                </a>
+
+                <div class="bottom_nav">
+                    <!-- Navbar Links -->
+                    <div class="nav_links">
+                        <li class="navbar_item">
+                            <a href="index.html" class="navbar_links">Home</a>
+                        </li>
+                        <li class="navbar_item">
+                            <a href="services.html" class="navbar_links">Services</a>
+                        </li>
+                        <li class="navbar_item">
+                            <a href="contact.html" class="navbar_links">Contact</a>
+                        </li>
+                        <li class="navbar_item">
+                            <a href="appointments.html" class="navbar_links">Appointments</a>
+                        </li>
+                        <li class="navbar_item">
+                            <a href="about.html" class="navbar_links">About</a>
+                        </li>
+                    </div>
+                </div>
+                
+                <div class="nav_buttons">
+                    <!-- Request Appointment Button -->
+                    <li class="navbar_btn">
+                        <a href="appointments.html" class="button">Request Appointment</a>
+                    </li>
+                    <!-- Contact Icons -->
+                    <li class="navbar_icons">
+                        <a href="contact.html" class="fa-solid fa-location-dot fa-lg"></a>
+                        <a href="contact.html" class="fa-solid fa-phone fa-lg"></a>
+                        <a href="contact.html" class="fa-solid fa-envelope fa-lg"></a>
+                    </li> 
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li class="indicator" data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li class="indicator" data-target="#myCarousel" data-slide-to="1"></li>
+            <li class="indicator" data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <!-- C:\Users\jasmi\OneDrive - University of Saskatchewan\Year Three\CMPT 281\Assignment 2\ -->
+                <img class="d-block p-3 w-100" src="Images\AdobeStock_283930217_Preview-transformed.jpeg" alt="Denture examination">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Welcome to Second Avenue Dental</h1>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <!-- C:\Users\jasmi\OneDrive - University of Saskatchewan\Year Three\CMPT 281\Assignment 2\ -->
+                <img class="d-block p-3 w-100" src="Images\AdobeStock_261217341_Preview-transformed.jpeg" alt="Dental office">
+            </div>
+            <div class="carousel-item">
+                <!-- C:\Users\jasmi\OneDrive - University of Saskatchewan\Year Three\CMPT 281\Assignment 2\ -->
+                <img class="d-block p-3 w-100" src="Images\AdobeStock_197361549_Preview-transformed.jpeg" alt="Dental check-up">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Services Homepage Section -->
+    <div class="services">
+        <div class="services_container">
+            <ul class="services_buttons">
+                <li class="services_icons_container">
+                    <a href="services.html" class="fa-solid fa-tooth fa-3x bounce"><p class="services_text">Quis Nostrud</p></a>
+                    <a href="services.html" class="fa-solid fa-teeth fa-3x bounce"><p class="services_text">Proident</p></a>
+                    <a href="services.html" class="fa-solid fa-x-ray fa-3x bounce"><p class="services_text">Voluptate Velit</p></a>
+                    <a href="services.html" class="fa-solid fa-user-doctor fa-3x bounce"><p class="services_text">Cillum</p></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- About Homepage Section -->
+    <div class="about">
+        <div class="about_container">
+            <div class="about_txt">
+                <h2 class="about_title">Lorem Ipsum Dolor Sit Amet</h2>
+                <h3 class="about_subtitle">Consectetur Adipiscing Elit</h3>
+                <p class="about_text">Odio ut enim blandit volutpat maecenas volutpat blandit. Egestas erat imperdiet sed euismod nisi porta lorem. At risus viverra adipiscing at in tellus integer feugiat scelerisque. Eu ultrices vitae auctor eu. Gravida quis blandit turpis cursus. </p>
+                <div class="learn_more_btn">
+                    <a href="about.html" class="button">Learn More</a>
+                </div>
+            </div>
+            <img src="Images\AdobeStock_518413292_Preview-transformed.jpeg" alt="Patient with dental assistant" class="about_img">
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer_container">
+            <ul class="footer_menu">
+                <ul class="footer_icons" id="footer_contact">
+                    <li class="footer_item">222 2nd St N, Saskatoon SK S2K 2S2</li>
+                    <li class="footer_item">Ph: (306) 555-5555</li>
+                    <li class="footer_item">Email: second_ave@dental.ca</li>
+                </ul>
+                <ul class="footer_hours">
+                    <li class="hours"><b>Our Hours</b></li>
+                    <li class="hours">Monday-Friday: 9am-7pm</li>
+                    <li class="hours">Saturday: 11am-5pm</li>
+                    <li class="hours">Sunday: Closed</li>
+                </ul>
+                <li class="footer_links">
+                    <a href=https://www.facebook.com class="fa-brands fa-facebook fa-2x"></a>
+                    <a href=https://www.twitter.com class="fa-brands fa-twitter fa-2x"></a>
+                    <a href=https://www.google.com/maps/place/2nd+Ave+N,+Saskatoon,+SK/@52.140984,-106.6608483,17z/data=!3m1!4b1!4m5!3m4!1s0x5304f6c2a82cb55f:0x8a021a776aa87eda!8m2!3d52.140984!4d-106.6582734 class="fa-brands fa-google fa-2x"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    
+  </body>
+</html>

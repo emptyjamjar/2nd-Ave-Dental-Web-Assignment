@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request an Appointment</title>
+    <link rel="icon" type="image/x-icon" href="C:\Users\jasmi\OneDrive - University of Saskatchewan\Year Three\CMPT 281\Assignment 2\Icons\tooth-solid.svg">
+    <link rel="stylesheet" href="styles.css" />
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/8916d77dd2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar_container">
+            <ul class="navbar_menu">
+                
+                <!-- Logo -->
+                <a href="index.html" id="navbar_logo"> 
+                    <!-- C:\Users\jasmi\OneDrive - University of Saskatchewan\Year Three\CMPT 281\Assignment 2\ -->
+                    <img src="Images\second_ave.png" alt="Second Ave Dental Logo" width="200px" height="100px" class="nav_logo">
+                </a>
+
+                <div class="bottom_nav">
+                    <!-- Navbar Links -->
+                    <div class="nav_links">
+                        <li class="navbar_item">
+                            <a href="index.html" class="navbar_links">Home</a>
+                        </li>
+                        <li class="navbar_item">
+                            <a href="services.html" class="navbar_links">Services</a>
+                        </li>
+                        <li class="navbar_item">
+                            <a href="contact.html" class="navbar_links">Contact</a>
+                        </li>
+                        <li class="navbar_item">
+                            <a href="appointments.html" class="navbar_links">Appointments</a>
+                        </li>
+                        <li class="navbar_item">
+                            <a href="about.html" class="navbar_links">About</a>
+                        </li>
+                    </div>
+                </div>
+                
+                <div class="nav_buttons">
+                    <!-- Request Appointment Button -->
+                    <li class="navbar_btn">
+                        <a href="appointments.html" class="button">Request Appointment</a>
+                    </li>
+                    <!-- Contact Icons -->
+                    <li class="navbar_icons">
+                        <a href="contact.html" class="fa-solid fa-location-dot fa-lg"></a>
+                        <a href="contact.html" class="fa-solid fa-phone fa-lg"></a>
+                        <a href="contact.html" class="fa-solid fa-envelope fa-lg"></a>
+                    </li> 
+                </div>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Appointment Booking Content -->
+    <div class="appointment_page">
+        <div class="appt_container">
+
+
+            <!-- Contact Information -->
+            <div class="appt_contact_container">
+                <h2 class="appt_contact_hd">We can also be reached by phone or email</h2>
+                <ul class="appt_contact_txt">
+                    <li class="appt_txt_item"><i id="appt_phone_icon" class="fa-solid fa-phone disabled"></i>(306) 222-2222</li>
+                    <li class="appt_txt_item"><i id="appt_mail_icon" class="fa-solid fa-envelope disabled"></i>second_ave@dental.ca</li>
+                    <br>
+                    <br>
+                    <li class="appt_txt_item" id="hours_hd"><b>Our Hours</b></li>
+                    <li class="appt_txt_item">Monday-Friday: 9am - 7pm</li>
+                    <li class="appt_txt_item">Saturday: 11am - 5pm</li>
+                    <li class="appt_txt_item">Sunday: Closed</li>
+
+
+                </ul>
+            </div>
+            
+            <!-- Appointment Form -->
+            <form action="mailto:secondave@dental.ca" class="appt_form" method="post" enctype="text/plain">
+                <h1 class="appt_form_hd">Appointment Request</h1>
+                <ul class="appt_fields">
+
+                    <!-- Appointment form (left) -->
+                    <div class="appt_left">
+                        <li class="name_field">
+                            <label for="appt_name">Name</label>
+                            <input type="text" required id="appt_name" name="name" placeholder="eg. John Doe" 
+                            pattern="^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)" title="Please enter your first and last name."/>
+                        </li>
+                        <li class="mail_field">
+                            <label for="appt_mail">Email</label>
+                            <input type="email" id="appt_mail" name="mail" placeholder="user@email.com" title="e.g. yourname@mail.com"/>
+                        </li>
+                        <li class="phone_field">
+                            <label for="appt_phone">Phone</label>
+                            <input type="tel" required id="appt_phone" name="phone" placeholder="(555) 555-5555" 
+                            pattern="^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$" minlength="9" maxlength="16"
+                            title="Please enter a 10-digit phone number."/>
+                        </li>
+                    </div>
+
+                    <!-- Appointment form (right) -->
+                    <div class="appt_right">
+                        <li class="date">
+                            <label for="appt_date">Select a date:</label>
+                            <input required name="date" id="appt_date" min="2022-12-01" max="2000-13-13" type="date" value="yyyy-mm-dd">
+                        </li>
+                        <li class="time">
+                            <label for="appt_time">Select a time:</label>
+                            <input required name="time" type="time" id="appt_time" min="9:00 AM" max="19:00 PM">
+                        </li>
+                        <li class="appt_radio">
+                            <label for='radio_container'>Patient Information</label>
+                            <div class='radio-container'>
+                                <input checked='' id='appt_existing' name='user_patient_info' type='radio' value='Existing'>
+                                <label for='appt_existing'>Existing Patient</label>
+                                <input id='appt_new' name='user_patient_info' type='radio' value='New'>
+                                <label for='appt_new'>New Patient</label>
+                            </div>
+                        </li>
+                    </div>
+                    
+
+                    <!-- Checkbox -->
+                        <h3 class="checkbox_hd">Please select the services you are interested in: </h3>
+                        <div class="checkbox">
+                            <label class="check_label">Quis Nostrud
+                                <input name="service" type="checkbox" value="Quis Nostrud">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check_label">Proident
+                                <input name="service" type="checkbox" value="Proident">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check_label">Voluptate Velit
+                                <input name="service" type="checkbox" value="Voluptate Velit">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check_label">Cillum
+                                <input name="service" type="checkbox" value="Cillum">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check_label">Occaecat Cupidatat
+                                <input name="service" type="checkbox" value="Occaecat Cupidatat">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check_label">Deserunt Mollit
+                                <input name="service" type="checkbox" value="Deserunt Mollit">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="check_label">Reprehenderit
+                                <input name="service" type="checkbox" value="Reprehenderit">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    
+                    <!-- Submit Button -->
+                    <li class="submit_btn">
+                        <button class="button" type="submit">Submit</button>
+                    </li>
+
+                </ul>
+            </form>
+
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer_container">
+            <ul class="footer_menu">
+                <ul class="footer_icons" id="footer_contact">
+                    <li class="footer_item">222 2nd St N, Saskatoon SK S2K 2S2</li>
+                    <li class="footer_item">Ph: (306) 555-5555</li>
+                    <li class="footer_item">Email: second_ave@dental.ca</li>
+                </ul>
+                <ul class="footer_hours">
+                    <li class="hours"><b>Our Hours</b></li>
+                    <li class="hours">Monday-Friday: 9am-7pm</li>
+                    <li class="hours">Saturday: 11am-5pm</li>
+                    <li class="hours">Sunday: Closed</li>
+                </ul>
+                <li class="footer_links">
+                    <a href=https://www.facebook.com class="fa-brands fa-facebook fa-2x"></a>
+                    <a href=https://www.twitter.com class="fa-brands fa-twitter fa-2x"></a>
+                    <a href=https://www.google.com/maps/place/2nd+Ave+N,+Saskatoon,+SK/@52.140984,-106.6608483,17z/data=!3m1!4b1!4m5!3m4!1s0x5304f6c2a82cb55f:0x8a021a776aa87eda!8m2!3d52.140984!4d-106.6582734 class="fa-brands fa-google fa-2x"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script src="a2.js"></script>
+</body>
+</html>
